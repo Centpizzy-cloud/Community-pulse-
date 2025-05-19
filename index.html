@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline';">
+  <meta name="description" content="Community Pulse - Report and track civic issues in Nigeria." />
+  <title>Community Pulse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🇳🇬 Community Pulse</h1>
+    <p>Speak Up for Your State - Report and Track Issues Across Nigeria</p>
+  </header>
+  <div class="container">
+    <form id="reportForm">
+      <label for="state">State:</label>
+      <select id="state" required>
+        <option value="">Select a State</option>
+        <!-- States will be dynamically inserted here -->
+      </select>
+
+      <label for="category">Issue Category:</label>
+      <select id="category" required>
+        <option value="">Select...</option>
+        <option value="infrastructure">Infrastructure</option>
+        <option value="security">Security</option>
+        <option value="health">Health</option>
+        <option value="education">Education</option>
+        <option value="economy">Economic Hardship</option>
+        <option value="fuel">Fuel Scarcity / Transport</option>
+        <option value="governance">Bad Governance / Negligence</option>
+      </select>
+
+      <label for="location">Specific Location:</label>
+      <input type="text" id="location" required placeholder="e.g. Ajah Roundabout, Lagos" />
+
+      <label for="description">Description:</label>
+      <textarea id="description" required placeholder="Describe the issue in detail..."></textarea>
+
+      <label for="photo">Upload Photo Proof (optional):</label>
+      <input type="file" id="photo" accept="image/*" />
+
+      <button type="submit">Submit Report</button>
+    </form>
+    <div id="message"></div>
+
+    <div class="info-section">
+      <h3>💡 Empowering Communities Across Nigeria</h3>
+      <p>This app empowers everyday citizens to speak up about what’s affecting them,  from potholes and poor healthcare to insecurity and economic struggles.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
